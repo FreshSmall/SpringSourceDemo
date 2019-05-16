@@ -8,17 +8,17 @@ import java.lang.reflect.Type;
 
 public class SpringBeanFactoryTest {
 
-	private static final Gson gson = new GsonBuilder().serializeNulls().create();
+    private static final Gson gson = new GsonBuilder().serializeNulls().create();
 
-	private static final Gson gson1 = new Gson();
+    private static final Gson gson1 = new Gson();
 
-	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath*:beans.xml");
-		Car car = (Car) ctx.getBean("car");
-		System.out.println(car.getName());
-		System.out.println(car.getPrice());
+    public static void main(String[] args) {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath*:beans.xml");
+        Car car = (Car) ctx.getBean("car");
+        System.out.println(car.getName());
+        System.out.println(car.getPrice());
 		/*Car car = new Car();
 		System.out.println(gson.toJson(car));
 		System.out.println(gson1.toJson(null));*/
-	}
+    }
 }
