@@ -1,4 +1,4 @@
-.idea/
+/.idea
 .svn/
 bin/
 *.iml
